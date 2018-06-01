@@ -1,0 +1,53 @@
+/* 1 - Ask atleast 5 Questions 
+
+   2 - Keep Track of the questions the user answered correctly 
+  
+   3 - Provide a final message letting the user know the number of questions he or she got right 
+   
+   4 - Rank the palyer - All 5 correct - Gold Crown
+   
+                         3 - 4 correct - Silver Crown
+                         
+                         1 - 2 correct - Bronze Crown
+                         
+                         0     correct - No Crown */
+
+//quiz begins, no answeres correct
+var ansCorrect = 0;
+
+
+// 5 questions
+var q1 = prompt("Is the Milky Way bigger than the Sun?");
+if(q1 === "Yes"){
+  ansCorrect += 1;
+}
+var q2 = prompt("Is the Sun bigger than the Earth?");
+if(q2 === "Yes"){
+  ansCorrect += 1;
+  }
+var q3 = prompt("Is the Earth bigger than the Moon?");
+if(q3 === "Yes"){
+  ansCorrect += 1;
+  }
+var q4 = prompt("Is the Moon bigger than a commet?");
+if(q4 === "Yes"){
+  ansCorrect += 1;
+  }
+var q5 = prompt("Is a Commet bigger than a Mountain?");
+if(q5 === "Yes"){
+   ansCorrect += 1;
+  }
+//output results
+document.write('<p> You got ' + ansCorrect + ' out of 5 questions correct</p>');
+
+
+//output rank
+if(ansCorrect === 5){
+           document.write('<p><strong>You got a Gold Crown. Congrats!!<strong></p>'); 
+}else if(ansCorrect>=3){ 
+          document.write('<p><strong>You got a Silver Crown. Congrats!!<strong></p>');
+}else if(ansCorrect >=1){ 
+          document.write('<p><strong>You got a Bronze Crown. Congrats!!<strong></p>');
+}else{
+          document.write('<p><strong>Sorry! Please try again.<strong></p>');
+      }
