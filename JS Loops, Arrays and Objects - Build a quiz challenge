@@ -1,0 +1,30 @@
+var questions = [
+  ['How many states are in the US?', 50],
+  ['How many continents are there?', 7],
+  ['How many legs does an insect have?', 6]
+];
+
+var correctAnswers = 0;
+var question;
+var answer;
+var response;
+var html;
+
+function print(message) {
+  document.write(message);
+}
+
+for(var i = 0; i < questions.length; i += 1) {
+  question = questions[i][0];
+  answer = questions[i][1];
+  response = toLowerCase(prompt(question));
+  
+ if(response === answer){
+   correctAnswers += 1;
+ }
+}
+  
+
+html = correctAnswers + ' Question(s) were answered right.';
+print(html);
+
